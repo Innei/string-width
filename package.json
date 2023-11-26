@@ -1,5 +1,5 @@
 {
-	"name": "string-width",
+	"name": "@innei/string-width",
 	"version": "7.0.0",
 	"description": "Get the visual width of a string - the number of columns required to display it",
 	"license": "MIT",
@@ -13,8 +13,11 @@
 	"type": "module",
 	"exports": {
 		"types": "./index.d.ts",
-		"default": "./index.js"
+		"default": "./dist/index.js",
+		"import": "./dist/index.js",
+		"require": "./dist/index.cjs"
 	},
+	"main": "./dist/index.cjs",
 	"engines": {
 		"node": ">=18"
 	},
@@ -23,7 +26,8 @@
 	},
 	"files": [
 		"index.js",
-		"index.d.ts"
+		"index.d.ts",
+		"dist"
 	],
 	"keywords": [
 		"string",
@@ -50,14 +54,13 @@
 		"fixed-width",
 		"east-asian-width"
 	],
-	"dependencies": {
-		"emoji-regex": "^10.3.0",
-		"get-east-asian-width": "^1.0.0",
-		"strip-ansi": "^7.1.0"
-	},
 	"devDependencies": {
 		"ava": "^5.3.1",
+		"emoji-regex": "^10.3.0",
+		"get-east-asian-width": "^1.0.0",
+		"strip-ansi": "^7.1.0",
 		"tsd": "^0.29.0",
+		"tsup": "8.0.1",
 		"xo": "^0.56.0"
 	}
 }
